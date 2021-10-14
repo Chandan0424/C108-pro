@@ -1,0 +1,43 @@
+body{
+    text-align: center;
+    background-color: rgb(230, 203, 170);
+    font-family: 'Patrick Hand', cursive;
+}
+#heading{
+    border:5px solid blue;
+    width: 500px;
+    float: none;
+    margin-left: 700px;
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+#main{
+    background-color:rgb(108, 173, 173);
+    margin-top:-20px;
+    height: 100px;
+    color: white;
+}
+.start{
+    margin-top: 10px;
+}
+#main label{
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+}
+.sty{
+    color: white;
+}
+.check{
+    font-weight: bold;
+}
+.copyright_footer{
+    text-align: center;
+    background-color: rgb(78, 128, 123);
+    bottom: 0;
+    position: fixed;
+    float:none;
+    color:floralwhite;
+    height:30px;
+    font-size: 30px;
+    width: 100%;
+    height: 50px;
+}
