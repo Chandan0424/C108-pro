@@ -20,17 +20,8 @@ function gotResult(error,results){
         g=Math.floor(Math.random()*255);
         b=Math.floor(Math.random()*255);
         
-        label_0=results[0].label;
-        if(label_0=="Background Noise"){
-            label=results[1].label;
-            document.getElementById("name").innerHTML=label;
-            percent=(results[1].confidence*100).toFixed(2);
-            console.log(percent);
-            document.getElementById("percent").innerHTML=percent+"%";
-            document.getElementById("name").style.color="rgb("+r+","+g+","+b+")";
-            document.getElementById("percent").style.color="rgb("+r+","+g+","+b+")";
-        }
-        else{
+
+
             label=results[0].label;
             document.getElementById("name").innerHTML=label;
             percent=(results[0].confidence*100).toFixed(2);
@@ -38,29 +29,29 @@ function gotResult(error,results){
             document.getElementById("percent").innerHTML=percent+"%";
             document.getElementById("name").style.color="rgb("+r+","+g+","+b+")";
             document.getElementById("percent").style.color="rgb("+r+","+g+","+b+")";
-        }
+
 
         img=document.getElementById("animal");
         text=document.getElementById("name").value;
-        if(text=="Barking"){
+        if(label=="Barking"){
 
             bark=bark+1;
             img.src="Dog.png";
             document.getElementById("dDog").innerHTML=bark;
         }
-        if(text=="Meow"){
+        if(label=="Meow"){
 
             meow=meow+1;
             img.src="Cat.png";
             document.getElementById("dCat").innerHTML=meow;
         }
-        if(text=="moo"){
+        if(label=="moo"){
 
             moo=moo+1;
             img.src="moo.png";
             document.getElementById("dCow").innerHTML=moo;
         }
-        if(text=="roar"){
+        if(label=="roar"){
 
             roar=roar+1;
             img.src="roar.png";
